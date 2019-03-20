@@ -1,0 +1,15 @@
+Resources:
+  AccountDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:provider.stackName}-account
+      AttributeDefinitions:
+        - AttributeName: accountId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: accountId
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+      Tags:
+        - Key: stack-name
+          Value: ${self:provider.stackName}

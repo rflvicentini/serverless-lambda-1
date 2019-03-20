@@ -1,0 +1,31 @@
+{
+  "name": "serverless-lambda-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rflvicentini/serverless-lambda-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rflvicentini/serverless-lambda-1/issues"
+  },
+  "homepage": "https://github.com/rflvicentini/serverless-lambda-1#readme",
+  "dependencies": {
+    "aws-sdk": "^2.422.0",
+    "config": "^3.0.1",
+    "lodash": "^4.17.11",
+    "serverless-plugin-warmup": "^4.4.3-rc.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "serverless-plugin-browserifier": "^2.1.0"
+  }
+}

@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "1358a4f9-9e20-4e92-ab7e-12633c4f162a",
+		"name": "api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{api-base-url}}/v1/hello",
+					"host": [
+						"{{api-base-url}}"
+					],
+					"path": [
+						"v1",
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account-post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"account@domain.com.br\",\n\t\"fullName\": \"John\"\n}"
+				},
+				"url": {
+					"raw": "{{api-base-url}}/v1/account",
+					"host": [
+						"{{api-base-url}}"
+					],
+					"path": [
+						"v1",
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "account-get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{api-base-url}}/v1/account/4fd19e6e-77a0-4ef3-8cf7-2b63d0066e42?",
+					"host": [
+						"{{api-base-url}}"
+					],
+					"path": [
+						"v1",
+						"account",
+						"4fd19e6e-77a0-4ef3-8cf7-2b63d0066e42"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

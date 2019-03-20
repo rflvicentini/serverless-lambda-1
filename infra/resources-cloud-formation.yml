@@ -1,0 +1,28 @@
+Parameters:
+  Project:
+    Type: String
+    Description: Enter with the desired projetct
+  Stage:
+    Type: String
+    Default: dev
+    AllowedValues:
+      - dev
+      - hml
+      - prd-blue
+      - prd-green
+    Description: Enter with the desired stage
+Resources:
+  AccountDBTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: !Join ["-", [!Ref "Project", !Ref "Stage", "account"]]
+      AttributeDefinitions:
+        - AttributeName: accountId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: accountId
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+      Tags:
+        - Key: stack-name
+          Value: !Join ["-", [!Ref "Project", !Ref "Stage"]]
