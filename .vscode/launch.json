@@ -1,0 +1,28 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "invoke account-get",
+      "program": "${workspaceFolder}//node_modules/serverless/bin/serverless",
+      "args": [
+        "invoke",
+        "local",
+        "--stage",
+        "dev",
+        "--function",
+        "account-get",
+        "--data",
+        "{\"headers\": {\"x-api-key\":\"your-api-key\", \"pathParameters\":{\"accountId\":\"4fd19e6e-77a0-4ef3-8cf7-2b63d0066e42\"}}"
+      ],
+      "env": {
+        "AWS_XRAY_CONTEXT_MISSING": "LOG_ERROR",
+        "_X_AMZN_TRACE_ID": "1=1"
+      }
+    }
+  ]
+}
